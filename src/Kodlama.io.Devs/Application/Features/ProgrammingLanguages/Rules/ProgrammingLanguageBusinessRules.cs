@@ -28,5 +28,9 @@ namespace Application.Features.ProgrammingLanguages.Rules
         {
             if (programmingLanguage == null) throw new BusinessException("Requested language doesn't exists");
         }
+        public void ProgrammingLanguageNameCannotBeNull(string name)
+        {
+            if (string.IsNullOrEmpty(name)) throw new BusinessException("Programming Language cannot be null");
+        }
     }
 }
